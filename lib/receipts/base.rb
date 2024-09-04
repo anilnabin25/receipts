@@ -3,7 +3,7 @@ module Receipts
     attr_accessor :title, :company
 
     class << self
-      attr_reader :title, :font_size
+      attr_reader :title
     end
 
     def initialize(attributes = {})
@@ -11,7 +11,6 @@ module Receipts
       setup_fonts attributes.fetch(:font, Receipts.default_font)
 
       @title = attributes.fetch(:title, self.class.title)
-      @font_size = attributes.fetch(:font_size, self.class.font_size)
 
       generate_from(attributes)
     end
