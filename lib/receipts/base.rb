@@ -50,7 +50,7 @@ module Receipts
       logo = company[:logo]
 
       if logo.nil?
-        text company.fetch(:name), align: :right, style: :bold, size: 16, color: "4b5563"
+        text company.fetch(:name), align: :right, style: :bold, size: 32, color: "4b5563"
       else
         image load_image(logo), height: height, position: :right
       end
